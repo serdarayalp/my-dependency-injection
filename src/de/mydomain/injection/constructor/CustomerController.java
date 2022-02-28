@@ -1,12 +1,11 @@
-package de.mydomain.legacy;
+package de.mydomain.injection.constructor;
 
 public class CustomerController {
 
-    private final CustomerModel customerModel;
+    private final ICustomerModel customerModel;
 
-    public CustomerController() {
-        // Lokale Abhängigkeit hier ist aufzulösen!
-        this.customerModel = new CustomerModel();
+    public CustomerController(ICustomerModel customerModel) {
+        this.customerModel = customerModel;
     }
 
     public String loadCustomer(int id) {

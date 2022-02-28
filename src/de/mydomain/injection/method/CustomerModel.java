@@ -1,4 +1,4 @@
-package de.mydomain.injection.setter;
+package de.mydomain.injection.method;
 
 public class CustomerModel implements ICustomerModel {
 

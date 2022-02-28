@@ -1,2 +1,6 @@
-package de.mydomain.injection.constructor;public interface ICustomerModel {
+package de.mydomain.injection.constructor;
+
+public interface ICustomerModel {
+
+    String loadCustomer(int id);
 }

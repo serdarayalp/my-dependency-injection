@@ -1,6 +1,6 @@
-package de.mydomain.injection.setter;
+package de.mydomain.injection.method;
 
-public class CustomerController {
+public class CustomerController implements ICustomerController{
 
     private ICustomerModel customerModel;
 
@@ -11,11 +11,8 @@ public class CustomerController {
         return customerModel.loadCustomer(id);
     }
 
-    public ICustomerModel getCustomerModel() {
-        return customerModel;
-    }
-
-    public void setCustomerModel(ICustomerModel customerModel) {
+    @Override
+    public void setDependency(ICustomerModel customerModel) {
         this.customerModel = customerModel;
     }
 }

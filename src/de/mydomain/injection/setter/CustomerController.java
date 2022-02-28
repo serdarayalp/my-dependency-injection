@@ -1,14 +1,21 @@
-package de.mydomain.injection.constructor;
+package de.mydomain.injection.setter;
 
 public class CustomerController {
 
-    private final ICustomerModel customerModel;
+    private ICustomerModel customerModel;
 
-    public CustomerController(ICustomerModel customerModel) {
-        this.customerModel = customerModel;
+    public CustomerController() {
     }
 
     public String loadCustomer(int id) {
         return customerModel.loadCustomer(id);
+    }
+
+    public ICustomerModel getCustomerModel() {
+        return customerModel;
+    }
+
+    public void setCustomerModel(ICustomerModel customerModel) {
+        this.customerModel = customerModel;
     }
 }
